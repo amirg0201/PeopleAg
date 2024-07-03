@@ -26,7 +26,7 @@ public class PersonRepository
 
     public void AddNewPerson(string name)
     {            
-        int result = 0;
+        int result = 1;
         try
         {
             // TODO: Call Init()
@@ -49,11 +49,10 @@ public class PersonRepository
 
     public List<PersonAg> GetAllPeople()
     {
-        // TODO: Init then retrieve a list of Person objects from the database into a list
         try
         {
-            Init ();    
-            return connAg.Table<PersonAg>().ToList();   
+            Init();
+            return connAg.Table<PersonAg>().ToList();
         }
         catch (Exception ex)
         {

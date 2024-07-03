@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite;
+﻿using SQLite;
+using System.ComponentModel.DataAnnotations.Schema;
+using TableAttribute = SQLite.TableAttribute;
+
 
 namespace People.Models
 {
-    [Table("people")]
+    [Table("AgPeople")]
     public class PersonAg
     {
         [PrimaryKey, AutoIncrement]
-        public int AgId { get; set; }
-
+        public int Id { get; set; }
         [MaxLength(250), Unique]
         public string NameAg { get; set; }
     }
